@@ -31,9 +31,7 @@ In the classical version of the Voss algorithm standard deviation is exponential
 \concept{random sequential additions}
 \author{Pavel V. Moskalev}
 \references{
-Shitov V.V. and Moskalev P.V.
-Modification of the Voss algorithm for simulation of the internal structure of a porous medium 
-//Technical Physics, Vol.50, No.2 (2005), pp.141-145.
+Shitov V.V. and Moskalev P.V. (2005) Modification of the Voss algorithm for simulation of the internal structure of a porous medium, Technical Physics, Vol.50, No.2, pp.141-145, doi:10.1134/1.1866426.
 }
 \examples{
 set.seed(20120522)

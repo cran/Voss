@@ -1,12 +1,11 @@
-require(fields)
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Function:
-# voss1d() & voss2d() - a fractal Brownian function on uniform 
+# voss1d() & voss2d() - a fractal Brownian function on uniform
 # 1D & 2D grid with a classic version of the Voss algorithm.
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Arguments:
-# g - a number of iteration; H - a Hurst parameter; 
-# r - a partition coefficient for the iteration segment; 
+# g - a number of iteration; H - a Hurst parameter;
+# r - a partition coefficient for the iteration segment;
 # center - logical; if center=TRUE, y-coordinates of
 # prefractal points will be centered.
 # Variables:
@@ -33,9 +32,9 @@ voss2d <- function(g=7, H=0.5, r=0.5, center=TRUE) {
   for (i in seq(2,g+1)) {
     gxy <- seq(0, 1, length=n[i])
     voss <- interp.surface.grid(voss, list(x=gxy, y=gxy))
-    voss$z <- array(rnorm(n=n[i]^2, mean=voss$z, sd=s[i]), 
-                    dim=rep(n[i], times=2)) 
+    voss$z <- array(rnorm(n=n[i]^2, mean=voss$z, sd=s[i]),
+                    dim=rep(n[i], times=2))
   }
   if (center) voss$z <- voss$z - mean(voss$z)
-  return(voss) 
+  return(voss)
 }

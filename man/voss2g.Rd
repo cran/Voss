@@ -5,13 +5,13 @@
 \code{voss2g()} function generates realizations of a fractal Brownian function on uniform 2D grid (FBF(x,y)) with a generic version of the Voss algorithm (random sequential additions).
 }
 \usage{
-voss2g(p=cbind(n=0.5^-seq(0,7)+1, 
-               s=dchisq(seq(0,7), df=2)), 
+voss2g(p=cbind(n=0.5^-seq(0,7)+1,
+               s=dchisq(seq(0,7), df=2)),
        center=TRUE)
 }
 \arguments{
 \item{p}{ a matrix of parameters:\cr
-\code{nrow(p)} a number of iterations;\cr 
+\code{nrow(p)} a number of iterations;\cr
 \code{p[,"n"]} a number of partition points in the iteration process;\cr
 \code{p[,"s"]} a standard deviation of normal pseudorandom additions; }
 \item{center}{ logical; if \code{center=TRUE} then the \code{y}-coordinates of prefractal points will be centered. }
@@ -34,9 +34,7 @@ By default, the iterative distribution of standard deviation in the generic vers
 \concept{random sequential additions}
 \author{Pavel V. Moskalev}
 \references{
-Shitov V.V. and Moskalev P.V.
-Modification of the Voss algorithm for simulation of the internal structure of a porous medium 
-//Technical Physics, Vol.50, No.2 (2005), pp.141-145.
+Shitov V.V. and Moskalev P.V. (2005) Modification of the Voss algorithm for simulation of the internal structure of a porous medium, Technical Physics, Vol.50, No.2, pp.141-145, doi:10.1134/1.1866426.
 }
 \examples{
 # Example 1: FBF(x,y) with a s[i]=dchisq(i,df=2)
@@ -48,7 +46,7 @@ contour(voss, levels=0, add=TRUE)
 
 # Example 2: FBF(x,y) with a s[i]=dlnorm(i,sdlog=1)
 set.seed(20120522)
-voss <- voss2g(p=cbind(n=0.5^-seq(0,7)+1, 
+voss <- voss2g(p=cbind(n=0.5^-seq(0,7)+1,
                        s=dlnorm(seq(0,7), sdlog=1)))
 image(voss, xlab="x", ylab="y",
       main="FBF(x,y) with a s[i]=dlnorm(i,sdlog=1)")
@@ -56,7 +54,7 @@ contour(voss, levels=0, add=TRUE)
 
 # Example 3: FBF(x,y) with a s[i]=df(i,df1=7,df2=7)
 set.seed(20120522)
-voss <- voss2g(p=cbind(n=0.5^-seq(0,7)+1, 
+voss <- voss2g(p=cbind(n=0.5^-seq(0,7)+1,
                        s=df(seq(0,7), df1=7, df2=7)))
 image(voss, xlab="x", ylab="y",
       main="FBF(x,y) with a s[i]=df(i,df1=5,df2=5)")

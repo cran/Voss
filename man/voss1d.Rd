@@ -31,8 +31,8 @@ In the classical version of the Voss algorithm a standard deviation is exponenti
 \concept{random sequential additions}
 \author{Pavel V. Moskalev}
 \references{
-Moskalev P.V. Visualization of wavelet spectra of fractal Brownian motion
-//Technical Physics, Vol.53, No.10 (2008), pp.1261-1266.
+Moskalev P.V. (2008) Visualization of wavelet spectra of fractal Brownian motion,
+Technical Physics, Vol.53, No.10, pp.1261-1266, doi:10.1134/S1063784208100022.
 }
 \examples{
 set.seed(20120522)
